@@ -1,7 +1,5 @@
-@prefix gip: <http://gipuzkoa.eus/resource/> .
-@prefix gip_prop:<http://gipuzkoa.eus/prop/> .
-@prefix dbpedia:<http://dbpedia.org/resource/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 
-gip:Donostia gip_prop:parte_de dbpedia:Gipuzkoa ;
-    rdfs:label "<<San Sebastián>>@es" .
+ex:Bilbo owl:sameAs wd:Q40232 .
