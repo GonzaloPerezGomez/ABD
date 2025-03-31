@@ -1,3 +1,5 @@
+#Named Graph: http://archivo-rdf-1/
+
 @prefix gip: <http://gipuzkoa.eus/resource/> .
 @prefix gip_prop:<http://gipuzkoa.eus/prop/> .
 @prefix dbpedia:<http://dbpedia.org/resource/> .

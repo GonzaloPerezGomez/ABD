@@ -1,0 +1,5 @@
+select ?s 
+FROM <http://data.abd.ehu.eus/museoak>
+where {
+    ?s ?p ?o .
+}
