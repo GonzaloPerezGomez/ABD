@@ -1,104 +1,105 @@
-@prefix per: <http://example.org/> .
-@prefix prop: <http://example.org/property> .
+@prefix per: <http://persona.org/resource/> .
+@prefix per_prop: <http://persona.org/property/> .
 @prefix schema: <http://schema.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-per:id1 prop:tiene_nombre "Juan" ;
-    prop:tiene_apellido "Perez" ;
-    prop:tiene_edad 28 ;
-    prop:vive_en_ciudad "Buenos Aires" ;
-    prop:vive_en_pais "Argentina" ;
-    prop:trabaja_de "Ingeniero" ;
-    prop:gana 75000 ;
+per:id1 per_prop:tiene_nombre "Juan"^^xsd:string ;
+    per_prop:tiene_apellido "Perez"^^xsd:string;
+    per_prop:tiene_edad "28"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Buenos Aires"^^xsd:string ;
+    per_prop:vive_en_pais "Argentina"^^xsd:string ;
+    per_prop:trabaja_de "Ingeniero"^^xsd:string ;
+    per_prop:gana "75000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id2 prop:tiene_nombre "Maria" ;
-    prop:tiene_apellido "Gomez" ;
-    prop:tiene_edad 34 ;
-    prop:vive_en_ciudad "Madrid" ;
-    prop:vive_en_pais "España" ;
-    prop:trabaja_de "Doctora" ;
-    prop:gana 90000 ;
+per:id2 per_prop:tiene_nombre "Maria"^^xsd:string ;
+    per_prop:tiene_apellido "Gomez"^^xsd:string ;
+    per_prop:tiene_edad "34"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Madrid"^^xsd:string ;
+    per_prop:vive_en_pais "España"^^xsd:string ;
+    per_prop:trabaja_de "Doctora"^^xsd:string ;
+    per_prop:gana "90000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id3 prop:tiene_nombre "John" ;
-    prop:tiene_apellido "Smith" ;
-    prop:tiene_edad 45 ;
-    prop:vive_en_ciudad "Nueva York" ;
-    prop:vive_en_pais "EEUU" ;
-    prop:trabaja_de "Abogado" ;
-    prop:gana 110000 ;
+per:id3 per_prop:tiene_nombre "John"^^xsd:string ;
+    per_prop:tiene_apellido "Smith"^^xsd:string ;
+    per_prop:tiene_edad "45"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Nueva York"^^xsd:string ;
+    per_prop:vive_en_pais "EEUU"^^xsd:string ;
+    per_prop:trabaja_de "Abogado"^^xsd:string ;
+    per_prop:gana "110000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id4 prop:tiene_nombre "Lisa" ;
-    prop:tiene_apellido "Wong" ;
-    prop:tiene_edad 29 ;
-    prop:vive_en_ciudad "Tokio" ;
-    prop:vive_en_pais "Japón" ;
-    prop:trabaja_de "Diseñadora" ;
-    prop:gana 68000 ;
+per:id4 per_prop:tiene_nombre "Lisa"^^xsd:string ;
+    per_prop:tiene_apellido "Wong"^^xsd:string ;
+    per_prop:tiene_edad "29"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Tokio"^^xsd:string ;
+    per_prop:vive_en_pais "Japón"^^xsd:string ;
+    per_prop:trabaja_de "Diseñadora"^^xsd:string ;
+    per_prop:gana "68000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id5 prop:tiene_nombre "Carlos" ;
-    prop:tiene_apellido "Santos" ;
-    prop:tiene_edad 40 ;
-    prop:vive_en_ciudad "Sao Paulo" ;
-    prop:vive_en_pais "Brasil" ;
-    prop:trabaja_de "Arquitecto" ;
-    prop:gana 82000 ;
+per:id5 per_prop:tiene_nombre "Carlos"^^xsd:string ;
+    per_prop:tiene_apellido "Santos"^^xsd:string ;
+    per_prop:tiene_edad "40"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Sao Paulo"^^xsd:string ;
+    per_prop:vive_en_pais "Brasil"^^xsd:string ;
+    per_prop:trabaja_de "Arquitecto"^^xsd:string ;
+    per_prop:gana "82000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id6 prop:tiene_nombre "Sophie" ;
-    prop:tiene_apellido "Dubois" ;
-    prop:tiene_edad 27 ;
-    prop:vive_en_ciudad "Paris" ;
-    prop:vive_en_pais "Francia" ;
-    prop:trabaja_de "Profesora" ;
-    prop:gana 48000 ;
+per:id6 per_prop:tiene_nombre "Sophie"^^xsd:string ;
+    per_prop:tiene_apellido "Dubois"^^xsd:string ;
+    per_prop:tiene_edad "27"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Paris"^^xsd:string ;
+    per_prop:vive_en_pais "Francia"^^xsd:string ;
+    per_prop:trabaja_de "Profesora"^^xsd:string ;
+    per_prop:gana "48000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id7 prop:tiene_nombre "Ahmed" ;
-    prop:tiene_apellido "Khan" ;
-    prop:tiene_edad 2338 ;
-    prop:vive_en_ciudad "Dubai" ;
-    prop:vive_en_pais "Emiratos Árabes" ;
-    prop:trabaja_de "Ingeniero" ;
-    prop:gana 95000 ;
+per:id7 per_prop:tiene_nombre "Ahmed"^^xsd:string ;
+    per_prop:tiene_apellido "Khan"^^xsd:string ;
+    per_prop:tiene_edad "2338"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Dubai"^^xsd:string ;
+    per_prop:vive_en_pais "Emiratos Árabes"^^xsd:string ;
+    per_prop:trabaja_de "Ingeniero"^^xsd:string ;
+    per_prop:gana "95000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id8 prop:tiene_nombre "Emma" ;
-    prop:tiene_apellido "Johnson" ;
-    prop:tiene_edad 31 ;
-    prop:vive_en_ciudad "Londres" ;
-    prop:vive_en_pais "Reino Unido" ;
-    prop:trabaja_de "Marketing" ;
-    prop:gana 60000 ;
+per:id8 per_prop:tiene_nombre "Emma"^^xsd:string ;
+    per_prop:tiene_apellido "Johnson"^^xsd:string ;
+    per_prop:tiene_edad "31"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Londres"^^xsd:string ;
+    per_prop:vive_en_pais "Reino Unido"^^xsd:string ;
+    per_prop:trabaja_de "Marketing"^^xsd:string ;
+    per_prop:gana "60000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id9 prop:tiene_nombre "Luis" ;
-    prop:tiene_apellido "Garcia" ;
-    prop:tiene_edad 38 ;
-    prop:vive_en_ciudad "Mexico DF" ;
-    prop:vive_en_pais "México" ;
-    prop:trabaja_de "Contador" ;
-    prop:gana 58000 ;
+per:id9 per_prop:tiene_nombre "Luis"^^xsd:string ;
+    per_prop:tiene_apellido "Garcia"^^xsd:string ;
+    per_prop:tiene_edad "38"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Mexico DF"^^xsd:string ;
+    per_prop:vive_en_pais "México"^^xsd:string ;
+    per_prop:trabaja_de "Contador"^^xsd:string ;
+    per_prop:gana "58000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id10 prop:tiene_nombre "Yuki" ;
-    prop:tiene_apellido "Tanaka" ;
-    prop:tiene_edad 26 ;
-    prop:vive_en_ciudad "Osaka" ;
-    prop:vive_en_pais "Japón" ;
-    prop:trabaja_de "Programadora" ;
-    prop:gana 72000 ;
+per:id10 per_prop:tiene_nombre "Yuki"^^xsd:string ;
+    per_prop:tiene_apellido "Tanaka"^^xsd:string ;
+    per_prop:tiene_edad "26"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Osaka"^^xsd:string ;
+    per_prop:vive_en_pais "Japón"^^xsd:string ;
+    per_prop:trabaja_de "Programadora"^^xsd:string ;
+    per_prop:gana "72000"^^xsd:integer ;
     rdf:type schema:Persona .
 
-per:id11 prop:tiene_nombre "Mikel" ;
-    prop:tiene_apellido "Aranguren" ;
-    prop:tiene_edad 45 ;
-    prop:vive_en_ciudad "Bilbo" ;
-    prop:vive_en_pais "Euskadi" ;
-    prop:trabaja_de "Profesor" ;
-    prop:gana 00000 ;
+per:id11 per_prop:tiene_nombre "Mikel"^^xsd:string ;
+    per_prop:tiene_apellido "Aranguren"^^xsd:string ;
+    per_prop:tiene_edad "45"^^xsd:integer ;
+    per_prop:vive_en_ciudad "Bilbo"^^xsd:string ;
+    per_prop:vive_en_pais "Euskadi"^^xsd:string ;
+    per_prop:trabaja_de "Profesor"^^xsd:string ;
+    per_prop:gana "00000"^^xsd:integer ;
     rdf:type schema:Persona .
 
