@@ -1,0 +1,10 @@
+prefix prop: <http://gipuzkoa.eus/prop/>
+
+select ?museo 
+
+where {
+    ?museo prop:kopurua ?num_trab
+    FILTER(?num_trab > "800"^^xsm:integer)
+    
+    ?trab prop
+}
