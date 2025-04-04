@@ -1,7 +1,5 @@
-#Named Graph: http://archivo-rdf-4/
-
 @prefix ex: <http://example.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 
-ex:Bilbo owl:sameAs wd:Q40232 .
+ex:Bilbo owl:sameAs wd:Q8692 .

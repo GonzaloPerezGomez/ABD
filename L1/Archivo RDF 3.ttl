@@ -1,5 +1,3 @@
-##Named Graph: http://archivo-rdf-3/
-
 @prefix per: <http://persona.org/resource/> .
 @prefix per_prop: <http://persona.org/property/> .
 @prefix schema: <http://schema.org/> .
