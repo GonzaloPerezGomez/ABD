@@ -1,0 +1,7 @@
+PREFIX gip: <http://gipuzkoa.eus/resource/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+select ?g ?s ?p ?o where {
+    ?g dcat:theme "museos".
+    Graph ?g{?s ?p ?o .
+        FILTER REGEX(str(?o), "aitor labajo", "i")}
+} 
