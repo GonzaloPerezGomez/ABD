@@ -1,4 +1,4 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix prop: <http://gipuzkoa.eus/prop/>
 prefix drm: <http://vocab.data.gov/def/drm#>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
@@ -7,12 +7,22 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 select ?museo ?trab ?num_trab
 FROM <http://data.abd.ehu.eus/museoak>
 where {
-    ?museo prop:kopurua ?num_trab .
-    ?trab foaf:name ?nombre .
-    ?trab rdf:type foaf:person .
-  	?trab <http://vocab.data.gov/def/drm#worksFor> ?museo  
-      
-    FILTER(?num_trab > "800"^^xsd:integer)
-    FILTER REGEX(?nombre, "Mi.*")
+  #Obtenemos el numero de trabajadores de cada museo
+  ?museo prop:kopurua ?num_trab .
+  
+  #De cada nodo sacamos el nombre
+  ?trab foaf:name ?nombre .
+
+  #De cada nodo cogemos los que son persona
+  ?trab rdf:type foaf:person .  
+
+  #Cogemos de cada nodo para que museo trabajan
+  ?trab drm:worksFor ?museo .
+
+  #Obtenemos solo los que tengan mas de 800 trabajadores      
+  FILTER(?num_trab > "800"^^xsd:integer)
+
+  #Solo los que tengan un trabajador que empiece por "Mi"
+  FILTER REGEX(?nombre, "Mi.*")
    
 }

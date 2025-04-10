@@ -1,0 +1,24 @@
+#dónde se situa el museo en el que trabaja Aitor Labajo
+
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix drm: <http://vocab.data.gov/def/drm#>
+prefix prop: <http://gipuzkoa.eus/prop/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ontology: <http://dbpedia.org/ontology/>
+
+select ?trab ?museo ?lugar ?label
+FROM <http://data.abd.ehu.eus/museoak>
+where{
+
+    ?trab foaf:name "Aitor Labajo".
+    
+    ?trab drm:worksFor ?museo .
+    
+    ?museo rdf:type ontology:museum .
+    
+    ?museo prop:kokalekua ?lugar .
+    
+    ?lugar rdfs:label ?label .
+    
+}
