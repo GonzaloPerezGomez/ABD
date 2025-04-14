@@ -1,12 +1,12 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
-select * where {
+select * where {{
 	SERVICE <http://___________:7200/repositories/abd-remoto> {
 		GRAPH <urn:local> {
-    			?s ?p ?o .}
+    			?s ?p ?o .}}
     			
-	?s owl:sameAs ?s_remote
+	Union{
   	SERVICE <http://__________________:7200/repositories/abd-remoto> {
   		GRAPH <urn:remoto> {
-    		?s_remote ?p_remote ?o_remote .}}
+    		?s_remote ?p_remote ?o_remote .}}}
 } 
