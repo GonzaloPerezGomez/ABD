@@ -1,0 +1,6 @@
+PREFIX gip: <http://gipuzkoa.eus/resource/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+INSERT DATA {
+  gip:bilbo owl:sameAs <http://dbpedia.org/resource/Bilbao> .
+}

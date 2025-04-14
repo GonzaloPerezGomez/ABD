@@ -6,8 +6,7 @@ select ?ciudad ?alcalde
 where{ 
     gip:gugenheim gip_prop:kokalekua ?ciudad .
 	?ciudad owl:sameAs ?town
-    service <http://dbpedia.org/sparql>{
-		?town <https://dbpedia.org/ontology/leaderName> ?alcalde .
+    service <https://dbpedia.org/sparql>{
+		?town <http://dbpedia.org/property/leaderName> ?alcalde .
     }
 }
-
