@@ -1,0 +1,12 @@
+PREFIX gip: <http://gipuzkoa.eus/resource/>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix gip_prop: <http://gipuzkoa.eus/prop/>
+
+select ?ciudad ?alcalde
+where{ 
+    gip:gugenheim gip_prop:kokalekua ?ciudad .
+	?ciudad owl:sameAs ?town
+    service <https://dbpedia.org/sparql>{
+		?town <http://dbpedia.org/property/leaderName> ?alcalde .
+    }
+}

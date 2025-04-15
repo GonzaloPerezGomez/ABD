@@ -1,0 +1,5 @@
+prefix dcat: <http://www.w3.org/ns/dcat#>
+
+insert data{
+	<http://data.abd.ehu.eus/museoak> dcat:theme "museos" .
+}
