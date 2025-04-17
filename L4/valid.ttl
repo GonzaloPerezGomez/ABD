@@ -1,0 +1,18 @@
+@prefix inst: <http://instancias.org/resource/> .
+@prefix per_prop: <http://instancias.org/property/> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inst:id1
+    a schema:Person ;
+    per_prop:givenName "Simon" ;
+    per_prop:familyName "Gonzalez" ;
+    per_prop:birthDate "1971-07-07"^^xsd:date ;
+    per_prop:deathDate "2076-09-10"^^xsd:date ;
+    per_prop:address inst:addr1 .
+
+inst:addr1
+    schema:streetAddress "1600 Amphitheatre Pkway" ;
+    schema:postalCode 9404 .
+
