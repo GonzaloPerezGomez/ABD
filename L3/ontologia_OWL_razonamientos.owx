@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://vocab.abd.ehu.eus/museoak"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://vocab.abd.ehu.eus/museoak">
+    <Prefix name="" IRI="http://www.semanticweb.org/usuario/ontologies/2025/3/untitled-ontology-4/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>file:/C:/Users/Usuario/Documents/Universidad/3º/Segundo%20cuatri/ABD/NoSQL/ABD/L3/Museoak-rdf-owl.rdf</Import>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Euskalplace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#bilbotarLangilea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#langilea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#trabajadorExplotado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Euskadi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://gipuzkoa.eus/resource/bilbo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/museum"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Euskalplace"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://gipuzkoa.eus/prop/kokalekua"/>
+            <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Euskadi"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#bilbotarLangilea"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://xmlns.com/foaf/0.1/person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://vocab.data.gov/def/drm#worksFor"/>
+                <Class IRI="http://dbpedia.org/ontology/museum"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://gipuzkoa.eus/prop/bizilekua"/>
+                <NamedIndividual IRI="http://gipuzkoa.eus/resource/bilbo"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#langilea"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://xmlns.com/foaf/0.1/person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://vocab.data.gov/def/drm#worksFor"/>
+                <Class IRI="http://dbpedia.org/ontology/museum"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#trabajadorExplotado"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://xmlns.com/foaf/0.1/person"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="http://vocab.data.gov/def/drm#worksFor"/>
+                <Class IRI="http://dbpedia.org/ontology/museum"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gipuzkoa.eus/prop/kokalekua"/>
+        <NamedIndividual IRI="http://gipuzkoa.eus/resource/bilbo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#Euskadi"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://gipuzkoa.eus/prop/bizilekua"/>
+        <ObjectProperty IRI="http://gipuzkoa.eus/prop/kokalekua"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://gipuzkoa.eus/prop/bizilekua"/>
+        <ObjectProperty IRI="http://vocab.data.gov/def/drm#worksFor"/>
+    </SubObjectPropertyOf>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="http://vocab.data.gov/def/drm#worksFor"/>
+    </InverseFunctionalObjectProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://gipuzkoa.eus/prop/bizilekua</IRI>
+        <Literal>Lo que ha cambiado es que a aquellos individuos que tuvieran una propiedas bizilekua, les ha añadido otras dos propiedades worksFor y kokalekua con el valor de la relación de bizilekua</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#Euskalplace</IRI>
+        <Literal>En la clase aparece la instancia Bilbo ya que tiene una relación kokalekua con Euskadi
+
+Por otra parte, para que aparezca la instancia Gugenheim  deberemos declarar que la propiedad kokalekua es transitiva</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#bilbotarLangilea</IRI>
+        <Literal>Ha asignado a la clase todas las instancias tipo persona que trabajan en un museo y que vivien en Bilbao</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#langilea</IRI>
+        <Literal>Vemos que  asignado a la clase a todas las entidades tipo persona que trabajan en algún museo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#langilea</IRI>
+        <Literal xml:lang="es">trabajador</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#trabajadorExplotado</IRI>
+        <Literal>No se añaden los trabajadores ya que OWL no asume que los museos son diferentes aunque el nombre si lo sea.
+
+Para solucionarlo deberiamos declarar mediante la propiedad diferentFrom que los museos son diferentes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://xmlns.com/foaf/0.1/person</IRI>
+        <Literal>Al indicar que worksFor es inverse funcional estamos declarando que si dos instancias tienen un relacion worksFor con el mismo valor, se deben considerar como una misma instancia
+
+Si ahora declaramos que todas las personas son diferentes, el razonador devolverá un error, ya que entra en conflicto la propiedad inverse funcional de worksFor con la declaración de differentFrom</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
