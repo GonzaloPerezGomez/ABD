@@ -1,18 +1,17 @@
 @prefix inst: <http://instancias.org/resource/> .
-@prefix per_prop: <http://instancias.org/property/> .
 @prefix schema: <http://schema.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/ns#> .
 
-inst:id1
-    a schema:Person ;
-    per_prop:givenName "Simon" ;
-    per_prop:familyName "Gonzalez" ;
-    per_prop:birthDate "1971-07-07"^^xsd:date ;
-    per_prop:deathDate "2076-09-10"^^xsd:date ;
-    per_prop:address inst:addr1 .
+inst:Lucia a :User ;
+    schema:name "Lucia" ;
+    schema:gender schema:Female ;
+    schema:birthDate "1971-07-07"^^xsd:date ;
+    schema:knows inst:Gonzalo .
 
-inst:addr1
-    schema:streetAddress "1600 Amphitheatre Pkway" ;
-    schema:postalCode 9404 .
+inst:Gonzalo a :User ;
+    schema:name "Gonzalo" ;
+    schema:gender schema:Male ;
+    schema:birthDate "1971-07-07"^^xsd:date ;
+    schema:knows inst:Lucia .
 
