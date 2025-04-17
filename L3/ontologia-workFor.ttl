@@ -1,0 +1,5 @@
+@prefix drm: <http://vocab.data.gov/def/drm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+drm:worksFor a owl:ObjectProperty ;
+    a owl:InverseFunctionalProperty .
