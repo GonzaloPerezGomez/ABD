@@ -1,0 +1,4 @@
+PREFIX prop: <http://gipuzkoa.eus/prop/>
+select * where {
+?person prop:kokalekua ?other_person .
+}
