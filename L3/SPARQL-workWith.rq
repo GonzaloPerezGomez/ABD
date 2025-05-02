@@ -1,0 +1,5 @@
+PREFIX prop: <http://gipuzkoa.eus/prop/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+select ?s ?p ?o where {
+	?s prop:workWith ?o
+}

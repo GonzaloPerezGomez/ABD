@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:ex="http://example.org/ontology#"
+	xmlns:drm="http://vocab.data.gov/def/drm#"
+	xmlns:prop="http://gipuzkoa.eus/prop/"
+	xmlns:dbo="http://dbpedia.org/ontology/">
+
+
+	<rdf:Description rdf:about="http://gipuzkoa.eus/resource/Euskadi">
+		<rdfs:label>Euskadi</rdfs:label>
+	</rdf:Description>
+
+
+	<rdf:Description rdf:about="http://gipuzkoa.eus/resource/donostia">
+		<prop:kokalekua rdf:resource="http://gipuzkoa.eus/resource/Euskadi"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://gipuzkoa.eus/resource/eibar">
+		<prop:kokalekua  rdf:resource="http://gipuzkoa.eus/resource/Euskadi"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://gipuzkoa.eus/resource/ataun">
+		<prop:kokalekua  rdf:resource="http://gipuzkoa.eus/resource/Euskadi"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://gipuzkoa.eus/resource/bilbo">
+		<prop:kokalekua  rdf:resource="http://gipuzkoa.eus/resource/Euskadi"/>
+	</rdf:Description>
+	
+
+
+
+
+
+
+
+	<rdf:Description rdf:about="http://example.org/ontology#MuseumWorker">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://vocab.data.gov/def/drm#worksFor"/>
+						<owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/museum"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/aitor-labajo">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/leire-bardaji">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/jon-alfaro">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/eneko-aranguren">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/maialen-albizun">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/soledad-barroso">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/mikel-aranguren">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/michael-bush">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/mark-wilkinson">
+        <rdf:type rdf:resource="http://example.org/ontology#MuseumWorker"/>
+        <drm:worksFor rdf:resource="http://dbpedia.org/ontology/museum"/>
+    </rdf:Description>
+
+	<rdf:Description rdf:about="http://example.org/person/aitor-labajo">
+		<prop:workWith  rdf:resource="http://example.org/person/leire-bardaji"/>
+	</rdf:Description>
+
+
+
+
+
+	<rdf:Description rdf:about="http://vocab.data.gov/def/drm#worksFor">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://gipuzkoa.eus/prop/kokalekua">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://gipuzkoa.eus/prop/workWith">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	</rdf:Description>
+
+ </rdf:RDF>
+
