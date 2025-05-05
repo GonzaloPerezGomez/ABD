@@ -2,6 +2,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 :TeamShape a sh:NodeShape ;
     sh:targetClass :Team ;
@@ -10,7 +11,9 @@
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
-    ] .
+    ] ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) .
 
 :TournamentShape a sh:NodeShape ;
     sh:targetClass :Tournament ;
@@ -37,7 +40,9 @@
         sh:minCount 2 ;
         sh:class :Team ;
         sh:nodeKind sh:IRI ;
-    ] .
+    ] ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) .
 
 :MatchShape a sh:NodeShape ;
     sh:targetClass :Match ;
@@ -67,4 +72,6 @@
         sh:maxCount 1 ;
         sh:class :Tournament ;
         sh:nodeKind sh:IRI ;
-    ] .
+    ] ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) .
